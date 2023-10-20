@@ -7,7 +7,7 @@ function AuthContextProvider(props) {
   const [loggedIn, setLoggedIn] = useState(undefined);
 
   async function getLoggedIn() {
-    const loggedInRes = await axios.get("http://localhost:5000/api/auth/loggedIn");
+    const loggedInRes = await axios.get("https://gestion-locataire-back.onrender.com/api/auth/loggedIn");
     setLoggedIn(loggedInRes.data);
   }
 

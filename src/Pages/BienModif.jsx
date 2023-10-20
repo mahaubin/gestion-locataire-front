@@ -31,7 +31,7 @@ const BienModif = () => {
 }
         await axios({
             method: 'PUT',
-            url: `http://localhost:5000/api/belongings/${id}`,
+            url: `https://gestion-locataire-back.onrender.com:10000/api/belongings/${id}`,
             data: dataToSend,
         }).then((res) => {
             redirect('/bien');

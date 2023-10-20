@@ -14,7 +14,7 @@ export const Register = () => {
         e.preventDefault();
         await axios({
             method: 'POST',
-            url: `http://localhost:5000/api/auth/register`,
+            url: `https://gestion-locataire-back.onrender.com:10000/api/auth/register`,
             data: {
                 firstName: nom,
                 lastName: prenom,

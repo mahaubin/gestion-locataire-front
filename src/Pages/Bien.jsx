@@ -17,7 +17,7 @@ const Bien = () => {
         e.preventDefault();
         await axios({
             method: 'POST',
-            url: `http://localhost:5000/api/belongings`,
+            url: `https://gestion-locataire-back.onrender.com:10000/api/belongings`,
             data: {
                 type: type,
                 rent: rent,
@@ -37,7 +37,7 @@ const Bien = () => {
     const getBien = async (e) => {
         await axios({
             method: 'GET',
-            url: `http://localhost:5000/api/belongings/utilisateur`,
+            url: `https://gestion-locataire-back.onrender.com:10000/api/belongings/utilisateur`,
         }).then((res) => {
             setListBien(res.data)
         })
@@ -49,7 +49,7 @@ const Bien = () => {
     const deleteBien = async (idBien) => {
         await axios({
             method: 'DELETE',
-            url: `http://localhost:5000/api/belongings/${idBien}`,
+            url: `https://gestion-locataire-back.onrender.com:10000/api/belongings/${idBien}`,
           })
             .then((res) => {
                 toast.success('Suppression de bien avec succèss', {
