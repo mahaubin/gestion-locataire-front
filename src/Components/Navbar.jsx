@@ -10,7 +10,7 @@ const Navbar = () => {
     const deconnexion = async () => {
         await axios({
           method: 'GET',
-          url: `http://localhost:5000/api/auth/logout`,
+          url: `https://gestion-locataire-back.onrender.com/api/auth/logout`,
         })
           .then((res) => {
               redirect('/');

@@ -17,7 +17,7 @@ const LocataireModif = () => {
     const getBien = async (e) => {
         await axios({
             method: 'GET',
-            url: `https://gestion-locataire-back.onrender.com:10000/api/belongings/status`,
+            url: `https://gestion-locataire-back.onrender.com/api/belongings/status`,
         }).then((res) => {
             setListBien(res.data)
         })
@@ -52,7 +52,7 @@ const LocataireModif = () => {
         console.log(dataToSend)
         await axios({
             method: 'PUT',
-            url: `https://gestion-locataire-back.onrender.com:10000/api/tenant/${id}`,
+            url: `https://gestion-locataire-back.onrender.com/api/tenant/${id}`,
             data:  {
                 firstName: dataToSend.nom,
                 lastName: dataToSend.prenom,

@@ -14,7 +14,7 @@ export const Accueil = () => {
         try {
            const connected= await axios({
                 method: 'POST',
-                url: `https://gestion-locataire-back.onrender.com:10000/api/auth/login`,
+                url: `https://gestion-locataire-back.onrender.com/api/auth/login`,
                 data: {
                     email: email,  
                     password: password,
